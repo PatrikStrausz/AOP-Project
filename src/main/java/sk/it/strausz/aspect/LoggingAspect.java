@@ -12,6 +12,22 @@ import java.util.List;
 @Component
 public class LoggingAspect {
 
+
+
+    @Pointcut("execution(* sk.it.strausz.dao.*.get*(..))")
+    private void getter(){
+
+        System.out.println("\n======>>> Executing @Poincut Getter");
+
+    }
+
+    @Pointcut("execution(* sk.it.strausz.dao.*.set*(..))")
+    private void setter(){
+        System.out.println("\n======>>> Executing @Poincut Setter");
+
+    }
+
+
     @Before("execution( * sk.it.strausz.dao.*.*(..))")
     public void beforeAddAccountAdvice(){
 

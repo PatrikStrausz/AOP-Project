@@ -20,6 +20,10 @@ public class Main {
 
         carDAO.addCar(car);
 
+        carDAO.setName("AUDI");
+        carDAO.getName();
+
+
 
         List<Car> carList = carDAO.findCars();
 

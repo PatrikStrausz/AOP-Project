@@ -6,8 +6,15 @@ import sk.it.strausz.Car;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 @Component
 public class CarDAO {
+
+    private String name;
+
+
 
     public void addCar(Car car){
 
@@ -46,6 +53,17 @@ public class CarDAO {
         carList.add(temp3);
 
         return carList;
+    }
+
+    public String getName() {
+        System.out.println(getClass()+": in getName()");
+        return name;
+    }
+
+    public void setName(String name) {
+        System.out.println(getClass()+": in setName()");
+
+        this.name = name;
     }
 
 }
